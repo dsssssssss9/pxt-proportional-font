@@ -56,7 +56,7 @@ namespace proportionalFont {
    * Display the column by scrolling the display to the left by 1 pixel.
    */
   function displayColumn(data: number) {
-    let brightness = led.brightness();
+    let brightness = 0;
     for (let row = 0; row < 5; ++row) {
       for (let col = 0; col < 4; ++col) {
         led.plotBrightness(col, row, led.point(col + 1, row) ? brightness : 0);
